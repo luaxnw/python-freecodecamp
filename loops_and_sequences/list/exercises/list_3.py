@@ -5,12 +5,13 @@
 #Crie uma nova lista sem elementos repetidos, mantendo a ordem de aparecimento.
 
 list = [3,5,2,5,7,8,2,3,10]
+new_list = []
+my_set = set()
 
 for i in list:
-    aux_element = i
+    if i not in my_set:
+        my_set.add(i)
+        new_list.append(i)
 
-    for j in list:
-        if aux_element == j:
-            list.remove(aux_element)
 
-print(list)
+print(new_list)
